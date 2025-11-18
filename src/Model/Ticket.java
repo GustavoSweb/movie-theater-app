@@ -82,11 +82,17 @@ public class Ticket {
 
     public int getNumberSessionMovie() {
         return numberSessionMovie;
+
     }
 
     public void setNumberSessionMovie(int numberSessionMovie) {
         this.numberSessionMovie = numberSessionMovie;
+        if (numberSessionMovie <= 0)
+            throw new IllegalArgumentException("Número da sessão inválido.");
+        this.numberSessionMovie = numberSessionMovie;
     }
+
+
 
     public int getNumberSeatMovie() {
         return numberSeatMovie;
