@@ -1,6 +1,5 @@
 package Repository;
 
-
 import Model.Promotion;
 
 import java.util.ArrayList;

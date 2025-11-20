@@ -23,21 +23,45 @@ public class Showing {
         this.price = price;
     }
 
-    public int getShowingId() { return showingId; }
-    public void setShowingId(int showingId) { this.showingId = showingId; }
+    public int getShowingId() {
+        return showingId;
+    }
+    public void setShowingId(int showingId) {
+        this.showingId = showingId;
+    }
 
-    public int getMovieId() { return movieId; }
-    public void setMovieId(int movieId) { this.movieId = movieId; }
+    public int getMovieId() {
+        return movieId;
+    }
+    public void setMovieId(int movieId) {
+        this.movieId = movieId;
+    }
 
-    public int getHallId() { return hallId; }
-    public void setHallId(int hallId) { this.hallId = hallId; }
+    public int getHallId() {
+        return hallId;
+    }
+    public void setHallId(int hallId) {
+        this.hallId = hallId;
+    }
 
-    public LocalDate getShowDate() { return showDate; }
-    public void setShowDate(LocalDate showDate) { this.showDate = showDate; }
+    public LocalDate getShowDate() {
+        return showDate;
+    }
+    public void setShowDate(LocalDate showDate) {
+        this.showDate = showDate;
+    }
 
-    public LocalTime getShowTime() { return showTime; }
-    public void setShowTime(LocalTime showTime) { this.showTime = showTime; }
+    public LocalTime getShowTime() {
+        return showTime;
+    }
+    public void setShowTime(LocalTime showTime) {
+        this.showTime = showTime;
+    }
 
-    public BigDecimal getPrice() { return price; }
-    public void setPrice(BigDecimal price) { this.price = price; }
+    public BigDecimal getPrice() {
+        return price;
+    }
+    public void setPrice(BigDecimal price) {
+        this.price = price;
+    }
 }

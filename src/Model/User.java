@@ -9,8 +9,8 @@ public class User {
     private int age;
 
     public User(){
-
     }
+
    public User(String name, String username, String email, String password, int age) {
        this.name = name;
         this.username = username;
@@ -36,15 +36,6 @@ public class User {
     public void setEmail(String email) {
         this.email = email;
 
-        String regex = "^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+$";
-
-        if (email == null || email.matches(regex)) {
-            throw new IllegalArgumentException("Email invalido");
-        }
-            this.email = email.toLowerCase().trim();
-
-    }
-
     public String getPassword() {
         return password;
     }
@@ -58,7 +49,6 @@ public class User {
         this.age = age;
     }
 
-
     public void exibirUser(){
         System.out.println("Nome: " + this.name);
         System.out.println("Email: " + this.email);
@@ -66,6 +56,4 @@ public class User {
         System.out.println("idade: " + this.age);
         System.out.println("---------------------------------");
     }
-
-
 }

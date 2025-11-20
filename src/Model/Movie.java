@@ -21,21 +21,45 @@ public class Movie {
         this.genreId = genreId;
     }
 
-    public int getMovieId() { return movieId; }
-    public void setMovieId(int movieId) { this.movieId = movieId; }
+    public int getMovieId() {
+        return movieId;
+    }
+    public void setMovieId(int movieId) {
+        this.movieId = movieId;
+    }
 
-    public String getTitle() { return title; }
-    public void setTitle(String title) { this.title = title; }
+    public String getTitle() {
+        return title;
+    }
+    public void setTitle(String title) {
+        this.title = title;
+    }
 
-    public LocalDate getReleaseDate() { return releaseDate; }
-    public void setReleaseDate(LocalDate releaseDate) { this.releaseDate = releaseDate; }
+    public LocalDate getReleaseDate() {
+        return releaseDate;
+    }
+    public void setReleaseDate(LocalDate releaseDate) {
+        this.releaseDate = releaseDate;
+    }
 
-    public int getDurationMinutes() { return durationMinutes; }
-    public void setDurationMinutes(int durationMinutes) { this.durationMinutes = durationMinutes; }
+    public int getDurationMinutes() {
+        return durationMinutes;
+    }
+    public void setDurationMinutes(int durationMinutes) {
+        this.durationMinutes = durationMinutes;
+    }
 
-    public int getDistributorId() { return distributorId; }
-    public void setDistributorId(int distributorId) { this.distributorId = distributorId; }
+    public int getDistributorId() {
+        return distributorId;
+    }
+    public void setDistributorId(int distributorId) {
+        this.distributorId = distributorId;
+    }
 
-    public int getGenreId() { return genreId; }
-    public void setGenreId(int genreId) { this.genreId = genreId; }
+    public int getGenreId() {
+        return genreId;
+    }
+    public void setGenreId(int genreId) {
+        this.genreId = genreId;
+    }
 }

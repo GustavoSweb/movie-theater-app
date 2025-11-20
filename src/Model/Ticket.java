@@ -1,6 +1,5 @@
 package Model;
 
-
 import java.time.LocalDateTime;
 
 public class Ticket {
@@ -31,8 +30,6 @@ public class Ticket {
         this.numberTicket = numberTicket;
         this.priceMovie = priceMovie;
     }
-
-    ;
 
     public int getId() {
         return id;
@@ -82,17 +79,7 @@ public class Ticket {
 
     public int getNumberSessionMovie() {
         return numberSessionMovie;
-
     }
-
-    public void setNumberSessionMovie(int numberSessionMovie) {
-        this.numberSessionMovie = numberSessionMovie;
-        if (numberSessionMovie <= 0)
-            throw new IllegalArgumentException("Número da sessão inválido.");
-        this.numberSessionMovie = numberSessionMovie;
-    }
-
-
 
     public int getNumberSeatMovie() {
         return numberSeatMovie;
@@ -133,7 +120,5 @@ public class Ticket {
         System.out.println("Obrigado pela preferência, tenha um bom filme e se divirta😊🍿");
         System.out.println("------------------------------------");
     }
-
-
 }
 
