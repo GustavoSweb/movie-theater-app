@@ -1,5 +1,6 @@
 package Model;
 
+import Util.Validator;
 import java.time.LocalDateTime;
 
 public class Ticket {
@@ -15,93 +16,61 @@ public class Ticket {
     private int numberTicket;
     private double priceMovie;
 
-    public Ticket() {
+    public Ticket() {}
 
-    }
+    public Ticket(int id, String movieTheater, String titleMovie, String genres,
+                  LocalDateTime dateMovie, int durationMovie, int numberSessionMovie,
+                  int numberSeatMovie, int numberTicket, double priceMovie) {
 
-    public Ticket(int id, String movieTheater, String titleMovie,String genres, LocalDateTime dateMovie, int durationMovie, int numberSessionMovie, int numberSeatMovie, int numberTicket, double priceMovie) {
-        this.movieTheater = movieTheater;
-        this.titleMovie = titleMovie;
-        this.genres = genres;
-        this.dateMovie = dateMovie;
-        this.durationMovie = durationMovie;
-        this.numberSessionMovie = numberSessionMovie;
-        this.numberSeatMovie = numberSeatMovie;
-        this.numberTicket = numberTicket;
-        this.priceMovie = priceMovie;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
         this.id = id;
-    }
-
-    public String getMovieTheater() {
-        return movieTheater;
-    }
-
-    public void setMovieTheater(String movieTheater) {
         this.movieTheater = movieTheater;
-    }
-
-    public String getTitleMovie() {
-        return titleMovie;
-    }
-
-    public void setTitleMovie(String titleMovie) {
         this.titleMovie = titleMovie;
-    }
-    public String getGenres() {
-        return genres;
-    }
-    public void setGenres(String genres) {
         this.genres = genres;
-    }
-
-    public LocalDateTime getDateMovie() {
-        return dateMovie;
-    }
-
-    public void setDateMovie(LocalDateTime dateMovie) {
         this.dateMovie = dateMovie;
-    }
-
-    public int getDurationMovie() {
-        return durationMovie;
-    }
-
-    public void setDurationMovie(int durationMovie) {
         this.durationMovie = durationMovie;
-    }
 
-    public int getNumberSessionMovie() {
-        return numberSessionMovie;
-    }
+        setNumberSessionMovie(numberSessionMovie);
+        setPriceMovie(priceMovie);
 
-    public int getNumberSeatMovie() {
-        return numberSeatMovie;
-    }
-
-    public void setNumberSeatMovie(int numberSeatMovie) {
         this.numberSeatMovie = numberSeatMovie;
-    }
-
-    public int getNumberTicket() {
-        return numberTicket;
-    }
-
-    public void setNumberTicket(int numberTicket) {
         this.numberTicket = numberTicket;
     }
 
-    public double getPriceMovie() {
-        return priceMovie;
+    public int getId() { return id; }
+    public void setId(int id) { this.id = id; }
+
+    public String getMovieTheater() { return movieTheater; }
+    public void setMovieTheater(String movieTheater) { this.movieTheater = movieTheater; }
+
+    public String getTitleMovie() { return titleMovie; }
+    public void setTitleMovie(String titleMovie) { this.titleMovie = titleMovie; }
+
+    public String getGenres() { return genres; }
+    public void setGenres(String genres) { this.genres = genres; }
+
+    public LocalDateTime getDateMovie() { return dateMovie; }
+    public void setDateMovie(LocalDateTime dateMovie) { this.dateMovie = dateMovie; }
+
+    public int getDurationMovie() { return durationMovie; }
+    public void setDurationMovie(int durationMovie) { this.durationMovie = durationMovie; }
+
+    public int getNumberSessionMovie() { return numberSessionMovie; }
+
+    public void setNumberSessionMovie(int numberSessionMovie) {
+        Validator.validarSessao(numberSessionMovie);
+        this.numberSessionMovie = numberSessionMovie;
     }
+
+    public int getNumberSeatMovie() { return numberSeatMovie; }
+    public void setNumberSeatMovie(int numberSeatMovie) { this.numberSeatMovie = numberSeatMovie; }
+
+    public int getNumberTicket() { return numberTicket; }
+    public void setNumberTicket(int numberTicket) { this.numberTicket = numberTicket; }
+
+    public double getPriceMovie() { return priceMovie; }
 
     public void setPriceMovie(double priceMovie) {
+        Validator.validarPreco(priceMovie);
         this.priceMovie = priceMovie;
     }
 
@@ -121,4 +90,3 @@ public class Ticket {
         System.out.println("------------------------------------");
     }
 }
-
