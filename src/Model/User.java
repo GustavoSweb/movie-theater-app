@@ -58,9 +58,9 @@ public class User extends CinemaItem {
         System.out.println(" USUÁRIO ");
         System.out.println("ID: " + getId());
         System.out.println("Nome: " + getTitle());
-        System.out.println("Username: " + getUsername()t;
+        System.out.println("Username: " + getUsername());
         System.out.println("Email: " + getEmail());
-        System.out.println("Senha: " + getPassword())
+        System.out.println("Senha: " + getPassword());
         System.out.println("Idade: " + getAge());
     }
 }

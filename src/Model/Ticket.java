@@ -1,18 +1,20 @@
 package Model;
 
 import java.time.LocalDateTime;
+import java.math.BigDecimal;
+
 
 public class Ticket extends CinemaItem {
 
     private String cinemaName;
     private LocalDateTime sessionDate;
     private int seatNumber;
-    private double price;
+    private BigDecimal price;
 
     public Ticket() {}
 
     public Ticket(int id, String title, String cinemaName, LocalDateTime sessionDate,
-                  int seatNumber, double price) {
+                  int seatNumber, BigDecimal price) {
 
         super(id, title);
         this.cinemaName = cinemaName;
@@ -45,11 +47,11 @@ public class Ticket extends CinemaItem {
         this.seatNumber = seatNumber;
     }
 
-    public double getPrice() {
+    public BigDecimal getPrice() {
         return price;
     }
 
-    public void setPrice(double price) {
+    public void setPrice(BigDecimal price) {
         this.price = price;
     }
 
@@ -59,7 +61,7 @@ public class Ticket extends CinemaItem {
         System.out.println("ID: " + getId());
         System.out.println("Filme: " + getTitle());
         System.out.println("Cinema: " + getCinemaName());
-        System.out.println("Data da Sessão: " + getCinemaName());
+        System.out.println("Data da Sessão: " + getSessionDate());
         System.out.println("Assento: " + getSeatNumber());
         System.out.println("Preço: R$ " + getPrice());
     }

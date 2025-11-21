@@ -7,16 +7,16 @@ public class Movie extends CinemaItem {
     private LocalDate releaseDate;
     private int durationMinutes;
     private int distributorId;
-    private int genreId;
+    private String genre;
 
     public Movie() {}
 
-    public Movie(int id, String title, LocalDate releaseDate, int durationMinutes, int distributorId, int genreId) {
+    public Movie(int id, String title, LocalDate releaseDate, int durationMinutes, int distributorId, String genre) {
         super(id, title);
         this.releaseDate = releaseDate;
         this.durationMinutes = durationMinutes;
         this.distributorId = distributorId;
-        this.genreId = genreId;
+        this.genre = genre;
     }
 
     public LocalDate getReleaseDate() {
@@ -43,12 +43,12 @@ public class Movie extends CinemaItem {
         this.distributorId = distributorId;
     }
 
-    public int getGenreId() {
+    public String getGenre() {
         return genreId;
     }
 
-    public void setGenreId(int genreId) {
-        this.genreId = genreId;
+    public void setGenre(String genre) {
+        this.genre = genre;
     }
 
 
@@ -57,9 +57,9 @@ public class Movie extends CinemaItem {
         System.out.println(" FILME ");
         System.out.println("ID: " + getId());
         System.out.println("Título: " + getTitle());
-        System.out.println("Lançamento: " + releaseDate);
-        System.out.println("Duração: " + durationMinutes + " minutos");
-        System.out.println("Gênero (ID): " + genreId);
-        System.out.println("Distribuidora (ID): " + distributorId);
+        System.out.println("Lançamento: " + getReleaseDate());
+        System.out.println("Duração: " + getDurationMinutes() + " minutos");
+        System.out.println("Gênero : " + getGenre());
+        System.out.println("Distribuidora (ID): " + getDistributorId());
     }
 }

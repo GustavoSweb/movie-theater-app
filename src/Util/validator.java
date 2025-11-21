@@ -1,5 +1,7 @@
 package Util;
 
+import java.math.BigDecimal;
+
 public class Validator {
 
     public static void validateEmail(String email) {
@@ -22,8 +24,8 @@ public class Validator {
         }
     }
 
-    public static void validatePrice(double price) {
-        if (price < 0) {
+    public static void validatePrice(BigDecimal price) {
+        if (price == null || price.compareTo(BigDecimal.ZERO) < 0) {
             throw new IllegalArgumentException("Preço inválido.");
         }
     }
