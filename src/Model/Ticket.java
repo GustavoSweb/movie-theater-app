@@ -2,7 +2,7 @@ package Model;
 
 import java.time.LocalDateTime;
 import java.math.BigDecimal;
-
+import model.CinemaItem;
 
 public class Ticket extends CinemaItem {
 

@@ -1,6 +1,7 @@
 package Model;
 
 import Util.Validator;
+import model.CinemaItem;
 
 public class User extends CinemaItem {
 

@@ -3,6 +3,7 @@ package Model;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.LocalTime;
+import model.CinemaItem;
 
 public class Showing extends CinemaItem {
 

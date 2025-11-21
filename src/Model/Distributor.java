@@ -1,5 +1,7 @@
 package Model;
 
+import model.CinemaItem;
+
 public class Distributor extends CinemaItem {
 
     private String country;

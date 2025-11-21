@@ -1,6 +1,7 @@
 package Model;
 
 import java.time.LocalDate;
+import model.CinemaItem;
 
 public class Movie extends CinemaItem {
 
