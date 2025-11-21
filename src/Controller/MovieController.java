@@ -16,5 +16,4 @@ public class MovieController {
     public void listMovies() {
         movieView.displayMovies(movieRepository.list());
     }
-
 }

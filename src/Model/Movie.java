@@ -2,9 +2,8 @@ package Model;
 
 import java.time.LocalDate;
 
-public class Movie {
-    private int movieId;
-    private String title;
+public class Movie extends CinemaItem {
+
     private LocalDate releaseDate;
     private int durationMinutes;
     private int distributorId;
@@ -12,32 +11,18 @@ public class Movie {
 
     public Movie() {}
 
-    public Movie(int movieId, String title, LocalDate releaseDate, int durationMinutes, int distributorId, int genreId) {
-        this.movieId = movieId;
-        this.title = title;
+    public Movie(int id, String title, LocalDate releaseDate, int durationMinutes, int distributorId, int genreId) {
+        super(id, title);
         this.releaseDate = releaseDate;
         this.durationMinutes = durationMinutes;
         this.distributorId = distributorId;
         this.genreId = genreId;
     }
 
-    public int getMovieId() {
-        return movieId;
-    }
-    public void setMovieId(int movieId) {
-        this.movieId = movieId;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
     public LocalDate getReleaseDate() {
         return releaseDate;
     }
+
     public void setReleaseDate(LocalDate releaseDate) {
         this.releaseDate = releaseDate;
     }
@@ -45,6 +30,7 @@ public class Movie {
     public int getDurationMinutes() {
         return durationMinutes;
     }
+
     public void setDurationMinutes(int durationMinutes) {
         this.durationMinutes = durationMinutes;
     }
@@ -52,6 +38,7 @@ public class Movie {
     public int getDistributorId() {
         return distributorId;
     }
+
     public void setDistributorId(int distributorId) {
         this.distributorId = distributorId;
     }
@@ -59,7 +46,20 @@ public class Movie {
     public int getGenreId() {
         return genreId;
     }
+
     public void setGenreId(int genreId) {
         this.genreId = genreId;
+    }
+
+
+    @Override
+    public void displayInfo() {
+        System.out.println(" FILME ");
+        System.out.println("ID: " + getId());
+        System.out.println("Título: " + getTitle());
+        System.out.println("Lançamento: " + releaseDate);
+        System.out.println("Duração: " + durationMinutes + " minutos");
+        System.out.println("Gênero (ID): " + genreId);
+        System.out.println("Distribuidora (ID): " + distributorId);
     }
 }

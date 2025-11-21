@@ -3,7 +3,6 @@ package View;
 import java.util.List;
 import java.util.Scanner;
 import java.util.stream.IntStream;
-
 import Model.Movie;
 
 public class MovieView {
@@ -20,6 +19,5 @@ public class MovieView {
                     Movie movie = movies.get(index);
                     System.out.println(index + " - " + movie.getTitle());
                 });
-
     }
 }
