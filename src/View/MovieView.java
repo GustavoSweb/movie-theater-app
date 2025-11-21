@@ -13,13 +13,17 @@ public class MovieView {
         this.scanner = new Scanner(System.in);
     }
 
-    public void displayMovies(List<Movie> movies) {
+
+    public int displayMovies(List<Movie> movies) {
         System.out.println("=== Lista de Filmes ===");
-        IntStream.range(0, movies.size())
+        IntStream.range(1, movies.size() + 1)
                 .forEach(index -> {
-                    Movie movie = movies.get(index);
+                    Movie movie = movies.get(index - 1);
                     System.out.println(index + " - " + movie.getTitle());
                 });
-
+        
+        System.out.print("\nDigite o número do filme para ver as sessões (0 para voltar): ");
+        return scanner.nextInt();
     }
+
 }

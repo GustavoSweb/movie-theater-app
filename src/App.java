@@ -1,17 +1,29 @@
 import java.util.Scanner;
 import Controller.MovieController;
+import Controller.ShowingController;
+import Controller.TicketController;
 import Repository.MovieRepository;
 import View.MovieView;
+import View.ShowingView;
+import View.TicketView;
+import Model.Movie;
+import Model.Showing;
 
 public class App {
     private Scanner scanner;
     private MovieController movieController;
+    private ShowingController showingController;
+    private TicketController ticketController;
 
     public App() {
         this.scanner = new Scanner(System.in);
         MovieRepository movieRepository = new MovieRepository();
         MovieView movieView = new MovieView();
+        ShowingView showingView = new ShowingView();
+        TicketView ticketView = new TicketView();
         this.movieController = new MovieController(movieRepository, movieView);
+        this.showingController = new ShowingController(showingView);
+        this.ticketController = new TicketController(ticketView);
     }
 
     public void showMenu() {
@@ -27,7 +39,13 @@ public class App {
             
             switch (option) {
                 case 1:
-                    movieController.listMovies();
+                    Movie selectedMovie = movieController.selectMovie();
+                    if (selectedMovie != null) {
+                        Showing selectedShowing = showingController.selectShowing(selectedMovie);
+                        if (selectedShowing != null) {
+                            ticketController.checkTicketAvailability(selectedShowing);
+                        }
+                    }
                     break;
                 case 2:
                     System.out.println("Funcionalidade em desenvolvimento");

@@ -1,10 +1,9 @@
 package Model;
 
-
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 public class Ticket {
-
     private int id;
     private String movieTheater;
     private String titleMovie;
@@ -16,107 +15,57 @@ public class Ticket {
     private int numberTicket;
     private double priceMovie;
 
-    public Ticket() {
+    public Ticket(int i, int i1, int i2, String a2, LocalDate localDate) {}
 
-    }
-
-    public Ticket(int id, String movieTheater, String titleMovie,String genres, LocalDateTime dateMovie, int durationMovie, int numberSessionMovie, int numberSeatMovie, int numberTicket, double priceMovie) {
-        this.movieTheater = movieTheater;
-        this.titleMovie = titleMovie;
-        this.genres = genres;
-        this.dateMovie = dateMovie;
-        this.durationMovie = durationMovie;
-        this.numberSessionMovie = numberSessionMovie;
-        this.numberSeatMovie = numberSeatMovie;
-        this.numberTicket = numberTicket;
-        this.priceMovie = priceMovie;
-    }
-
-    ;
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
+    public Ticket(int id, String movieTheater, String titleMovie, String genres, 
+                  LocalDateTime dateMovie, int durationMovie, int numberSessionMovie, 
+                  int numberSeatMovie, int numberTicket, double priceMovie) {
         this.id = id;
-    }
-
-    public String getMovieTheater() {
-        return movieTheater;
-    }
-
-    public void setMovieTheater(String movieTheater) {
         this.movieTheater = movieTheater;
-    }
-
-    public String getTitleMovie() {
-        return titleMovie;
-    }
-
-    public void setTitleMovie(String titleMovie) {
         this.titleMovie = titleMovie;
-    }
-    public String getGenres() {
-        return genres;
-    }
-    public void setGenres(String genres) {
         this.genres = genres;
-    }
-
-    public LocalDateTime getDateMovie() {
-        return dateMovie;
-    }
-
-    public void setDateMovie(LocalDateTime dateMovie) {
         this.dateMovie = dateMovie;
-    }
-
-    public int getDurationMovie() {
-        return durationMovie;
-    }
-
-    public void setDurationMovie(int durationMovie) {
         this.durationMovie = durationMovie;
-    }
-
-    public int getNumberSessionMovie() {
-        return numberSessionMovie;
-
-    }
-
-    public void setNumberSessionMovie(int numberSessionMovie) {
         this.numberSessionMovie = numberSessionMovie;
-        if (numberSessionMovie <= 0)
-            throw new IllegalArgumentException("Número da sessão inválido.");
-        this.numberSessionMovie = numberSessionMovie;
-    }
-
-
-
-    public int getNumberSeatMovie() {
-        return numberSeatMovie;
-    }
-
-    public void setNumberSeatMovie(int numberSeatMovie) {
         this.numberSeatMovie = numberSeatMovie;
-    }
-
-    public int getNumberTicket() {
-        return numberTicket;
-    }
-
-    public void setNumberTicket(int numberTicket) {
         this.numberTicket = numberTicket;
-    }
-
-    public double getPriceMovie() {
-        return priceMovie;
-    }
-
-    public void setPriceMovie(double priceMovie) {
         this.priceMovie = priceMovie;
     }
+
+    public int getId() { return id; }
+    public void setId(int id) { this.id = id; }
+
+    public String getMovieTheater() { return movieTheater; }
+    public void setMovieTheater(String movieTheater) { this.movieTheater = movieTheater; }
+
+    public String getTitleMovie() { return titleMovie; }
+    public void setTitleMovie(String titleMovie) { this.titleMovie = titleMovie; }
+
+    public String getGenres() { return genres; }
+    public void setGenres(String genres) { this.genres = genres; }
+
+    public LocalDateTime getDateMovie() { return dateMovie; }
+    public void setDateMovie(LocalDateTime dateMovie) { this.dateMovie = dateMovie; }
+
+    public int getDurationMovie() { return durationMovie; }
+    public void setDurationMovie(int durationMovie) { this.durationMovie = durationMovie; }
+
+    public int getNumberSessionMovie() { return numberSessionMovie; }
+    public void setNumberSessionMovie(int numberSessionMovie) {
+        if (numberSessionMovie <= 0) {
+            throw new IllegalArgumentException("Número da sessão inválido.");
+        }
+        this.numberSessionMovie = numberSessionMovie;
+    }
+
+    public int getNumberSeatMovie() { return numberSeatMovie; }
+    public void setNumberSeatMovie(int numberSeatMovie) { this.numberSeatMovie = numberSeatMovie; }
+
+    public int getNumberTicket() { return numberTicket; }
+    public void setNumberTicket(int numberTicket) { this.numberTicket = numberTicket; }
+
+    public double getPriceMovie() { return priceMovie; }
+    public void setPriceMovie(double priceMovie) { this.priceMovie = priceMovie; }
 
     public void exibirTicket() {
         System.out.println("Ticket ID: " + this.id);
@@ -133,7 +82,5 @@ public class Ticket {
         System.out.println("Obrigado pela preferência, tenha um bom filme e se divirta😊🍿");
         System.out.println("------------------------------------");
     }
-
-
 }
 

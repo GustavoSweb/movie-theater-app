@@ -1,7 +1,9 @@
 package Model;
 
 import java.time.LocalDate;
-
+import java.util.ArrayList;
+import java.util.List;
+import Model.Showing;
 public class Movie {
     private int movieId;
     private String title;
@@ -9,8 +11,11 @@ public class Movie {
     private int durationMinutes;
     private int distributorId;
     private int genreId;
+    private List<Showing> showings;
 
-    public Movie() {}
+    public Movie() {
+        this.showings = new ArrayList<>();
+    }
 
     public Movie(int movieId, String title, LocalDate releaseDate, int durationMinutes, int distributorId, int genreId) {
         this.movieId = movieId;
@@ -19,6 +24,7 @@ public class Movie {
         this.durationMinutes = durationMinutes;
         this.distributorId = distributorId;
         this.genreId = genreId;
+        this.showings = new ArrayList<>();
     }
 
     public int getMovieId() { return movieId; }
@@ -38,4 +44,7 @@ public class Movie {
 
     public int getGenreId() { return genreId; }
     public void setGenreId(int genreId) { this.genreId = genreId; }
+
+    public List<Showing> getShowings() { return showings; }
+    public void setShowings(List<Showing> showings) { this.showings = showings; }
 }
