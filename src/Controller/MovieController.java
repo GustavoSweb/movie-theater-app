@@ -13,7 +13,18 @@ public class MovieController {
         this.movieView = movieView;
     }
 
-    public void listMovies() {
-        movieView.displayMovies(movieRepository.list());
+    public Movie listMovies() {
+        int index = movieView.displayMovies(movieRepository.list());
+        
+        if (index == 0) {
+            return null;
+        }
+        
+        if (index < 1 || index > movieRepository.list().size()) {
+            System.out.println("Índice inválido!");
+            return null;
+        }
+        
+        return movieRepository.list().get(index - 1);
     }
 }

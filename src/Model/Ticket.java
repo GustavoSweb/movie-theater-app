@@ -2,25 +2,65 @@ package Model;
 
 import java.time.LocalDateTime;
 import java.math.BigDecimal;
-import model.CinemaItem;
 
-public class Ticket extends CinemaItem {
+public class Ticket {
 
+    private int id;
+    private int userId;
+    private int showingId;
+    private String seatNumber;
     private String cinemaName;
     private LocalDateTime sessionDate;
-    private int seatNumber;
     private BigDecimal price;
 
     public Ticket() {}
 
-    public Ticket(int id, String title, String cinemaName, LocalDateTime sessionDate,
-                  int seatNumber, BigDecimal price) {
+    public Ticket(int id, int userId, int showingId, String seatNumber) {
+        this.id = id;
+        this.userId = userId;
+        this.showingId = showingId;
+        this.seatNumber = seatNumber;
+    }
 
-        super(id, title);
+    public Ticket(int id, String title, String cinemaName, LocalDateTime sessionDate,
+                  String seatNumber, BigDecimal price) {
+        this.id = id;
         this.cinemaName = cinemaName;
         this.sessionDate = sessionDate;
         this.seatNumber = seatNumber;
         this.price = price;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public int getUserId() {
+        return userId;
+    }
+
+    public void setUserId(int userId) {
+        this.userId = userId;
+    }
+
+    public int getShowingId() {
+        return showingId;
+    }
+
+    public void setShowingId(int showingId) {
+        this.showingId = showingId;
+    }
+
+    public String getSeatNumber() {
+        return seatNumber;
+    }
+
+    public void setSeatNumber(String seatNumber) {
+        this.seatNumber = seatNumber;
     }
 
     public String getCinemaName() {
@@ -39,14 +79,6 @@ public class Ticket extends CinemaItem {
         this.sessionDate = sessionDate;
     }
 
-    public int getSeatNumber() {
-        return seatNumber;
-    }
-
-    public void setSeatNumber(int seatNumber) {
-        this.seatNumber = seatNumber;
-    }
-
     public BigDecimal getPrice() {
         return price;
     }
@@ -55,11 +87,9 @@ public class Ticket extends CinemaItem {
         this.price = price;
     }
 
-    @Override
     public void displayInfo() {
         System.out.println(" TICKET ");
         System.out.println("ID: " + getId());
-        System.out.println("Filme: " + getTitle());
         System.out.println("Cinema: " + getCinemaName());
         System.out.println("Data da Sessão: " + getSessionDate());
         System.out.println("Assento: " + getSeatNumber());

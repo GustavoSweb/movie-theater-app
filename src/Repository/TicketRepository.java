@@ -15,4 +15,14 @@ public class TicketRepository {
     public List<Ticket> list() {
         return tickets;
     }
+
+    public List<Ticket> findByUserId(int userId) {
+        List<Ticket> userTickets = new ArrayList<>();
+        for (Ticket ticket : tickets) {
+            if (ticket.getUserId() == userId) {
+                userTickets.add(ticket);
+            }
+        }
+        return userTickets;
+    }
 }

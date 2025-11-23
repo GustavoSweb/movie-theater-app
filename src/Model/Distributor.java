@@ -1,18 +1,35 @@
 package Model;
 
-import model.CinemaItem;
+public class Distributor {
 
-public class Distributor extends CinemaItem {
-
+    private int id;
+    private String name;
     private String country;
     private String website;
 
     public Distributor() {}
 
-    public Distributor(int id, String title, String country, String website) {
-        super(id, title);
+    public Distributor(int id, String name, String country, String website) {
+        this.id = id;
+        this.name = name;
         this.country = country;
         this.website = website;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getCountry() {
@@ -31,12 +48,10 @@ public class Distributor extends CinemaItem {
         this.website = website;
     }
 
-
-    @Override
     public void displayInfo() {
         System.out.println(" DISTRIBUIDORA ");
         System.out.println("ID: " + getId());
-        System.out.println("Nome: " + getTitle());
+        System.out.println("Nome: " + getName());
         System.out.println("País: " + getCountry());
         System.out.println("Website: " + getWebsite());
     }

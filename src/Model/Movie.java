@@ -1,23 +1,45 @@
 package Model;
 
 import java.time.LocalDate;
-import model.CinemaItem;
+import java.util.ArrayList;
+import java.util.List;
+import Model.Showing;
+public class Movie {
 
-public class Movie extends CinemaItem {
-
+    private int id;
+    private String title;
     private LocalDate releaseDate;
     private int durationMinutes;
     private int distributorId;
     private String genre;
+    private List<Showing> showings;
 
     public Movie() {}
 
     public Movie(int id, String title, LocalDate releaseDate, int durationMinutes, int distributorId, String genre) {
-        super(id, title);
+        this.id = id;
+        this.title = title;
         this.releaseDate = releaseDate;
         this.durationMinutes = durationMinutes;
         this.distributorId = distributorId;
         this.genre = genre;
+        this.showings = new ArrayList<>();
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     public LocalDate getReleaseDate() {
@@ -45,15 +67,25 @@ public class Movie extends CinemaItem {
     }
 
     public String getGenre() {
-        return genreId;
+        return genre;
     }
 
     public void setGenre(String genre) {
         this.genre = genre;
     }
 
+    public List<Showing> getShowings() {
+        return showings;
+    }
 
-    @Override
+    public void setShowings(List<Showing> showings) {
+        this.showings = showings;
+    }
+
+    public void addShowing(Showing showing) {
+        this.showings.add(showing);
+    }
+
     public void displayInfo() {
         System.out.println(" FILME ");
         System.out.println("ID: " + getId());
