@@ -1,18 +1,12 @@
 package Repository;
 
 import Model.Showing;
-import java.util.ArrayList;
-import java.util.List;
+import Repository.BaseRepository;
 
-public class ShowingRepository {
+public class ShowingRepository extends BaseRepository<Showing> {
 
-    private List<Showing> showings = new ArrayList<>();
-
-    public void add(Showing showing) {
-        showings.add(showing);
-    }
-
-    public List<Showing> list() {
-        return showings;
+    @Override
+    public Showing findById(int id) {
+        return items.stream().filter(s -> s.getId() == id).findFirst().orElse(null);
     }
 }

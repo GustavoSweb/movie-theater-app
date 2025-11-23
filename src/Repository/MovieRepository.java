@@ -8,10 +8,8 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
-
-public class MovieRepository {
-
-    private List<Movie> movies = new ArrayList<>();
+import Repository.BaseRepository;
+public class MovieRepository extends BaseRepository<Movie> {
 
     public MovieRepository() {
         loadDefaultMovies();
@@ -44,16 +42,13 @@ public class MovieRepository {
         showing3.setPurchasedTickets(tickets3);
         movie2.addShowing(showing3);
         
-        movies.add(movie1);
-        movies.add(movie2);
-        movies.add(movie3);
+        items.add(movie1);
+        items.add(movie2);
+        items.add(movie3);
     }
 
-    public void add(Movie movie) {
-        movies.add(movie);
-    }
-
-    public List<Movie> list() {
-        return movies;
+    @Override
+    public Movie findById(int id) {
+        return items.stream().filter(m -> m.getId() == id).findFirst().orElse(null);
     }
 }

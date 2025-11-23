@@ -3,22 +3,18 @@ package Repository;
 import Model.Ticket;
 import java.util.ArrayList;
 import java.util.List;
+import Repository.BaseRepository;
 
-public class TicketRepository {
+public class TicketRepository extends BaseRepository<Ticket> {
 
-    private List<Ticket> tickets = new ArrayList<>();
-
-    public void add(Ticket ticket) {
-        tickets.add(ticket);
-    }
-
-    public List<Ticket> list() {
-        return tickets;
+    @Override
+    public Ticket findById(int id) {
+        return items.stream().filter(t -> t.getId() == id).findFirst().orElse(null);
     }
 
     public List<Ticket> findByUserId(int userId) {
         List<Ticket> userTickets = new ArrayList<>();
-        for (Ticket ticket : tickets) {
+        for (Ticket ticket : items) {
             if (ticket.getUserId() == userId) {
                 userTickets.add(ticket);
             }
