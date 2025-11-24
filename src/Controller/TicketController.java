@@ -6,7 +6,6 @@ import Model.Ticket;
 import Repository.TicketRepository;
 import View.TicketView;
 import java.util.List;
-import java.util.ArrayList;
 
 public class TicketController {
     private TicketRepository ticketRepository;

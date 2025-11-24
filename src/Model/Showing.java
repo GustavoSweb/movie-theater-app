@@ -9,7 +9,9 @@ import java.util.Set;
 import java.util.HashSet;
 import Model.Movie;
 import Model.Ticket;
-public class Showing {
+import java.io.Serializable;
+
+public class Showing implements Serializable {
 
     private int id;
     private int movieId;
