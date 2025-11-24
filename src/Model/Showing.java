@@ -142,14 +142,4 @@ public class Showing {
         }
         return availableSeats;
     }
-
-    public void displayInfo() {
-        System.out.println(" SESSÃO ");
-        System.out.println("ID Sessão: " + getId());
-        System.out.println("Filme (ID): " + getMovieId());
-        System.out.println("Sala: " + getHallId());
-        System.out.println("Data: " + getShowDate());
-        System.out.println("Horário: " + getShowTime());
-        System.out.println("Preço: R$ " + getPrice());
-    }
 }

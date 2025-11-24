@@ -71,14 +71,4 @@ public class User {
         Validator.validateAge(age);
         this.age = age;
     }
-
-    public void displayInfo() {
-        System.out.println(" USUÁRIO ");
-        System.out.println("ID: " + getId());
-        System.out.println("Nome: " + getName());
-        System.out.println("Username: " + getUsername());
-        System.out.println("Email: " + getEmail());
-        System.out.println("Senha: " + getPassword());
-        System.out.println("Idade: " + getAge());
-    }
 }

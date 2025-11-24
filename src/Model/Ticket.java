@@ -2,8 +2,10 @@ package Model;
 
 import java.time.LocalDateTime;
 import java.math.BigDecimal;
+import java.io.Serializable;
 
-public class Ticket {
+public class Ticket implements Serializable {
+    private static final long serialVersionUID = 1L;
 
     private int id;
     private int userId;
@@ -85,14 +87,5 @@ public class Ticket {
 
     public void setPrice(BigDecimal price) {
         this.price = price;
-    }
-
-    public void displayInfo() {
-        System.out.println(" TICKET ");
-        System.out.println("ID: " + getId());
-        System.out.println("Cinema: " + getCinemaName());
-        System.out.println("Data da Sessão: " + getSessionDate());
-        System.out.println("Assento: " + getSeatNumber());
-        System.out.println("Preço: R$ " + getPrice());
     }
 }

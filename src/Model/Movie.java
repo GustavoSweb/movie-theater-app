@@ -85,14 +85,4 @@ public class Movie {
     public void addShowing(Showing showing) {
         this.showings.add(showing);
     }
-
-    public void displayInfo() {
-        System.out.println(" FILME ");
-        System.out.println("ID: " + getId());
-        System.out.println("Título: " + getTitle());
-        System.out.println("Lançamento: " + getReleaseDate());
-        System.out.println("Duração: " + getDurationMinutes() + " minutos");
-        System.out.println("Gênero : " + getGenre());
-        System.out.println("Distribuidora (ID): " + getDistributorId());
-    }
 }
