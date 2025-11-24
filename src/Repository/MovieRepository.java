@@ -20,7 +20,6 @@ public class MovieRepository extends BaseRepository<Movie> {
         Movie movie2 = new Movie(2, "Parasita", LocalDate.of(2019, 5, 30), 132, 2, "Drama");
         Movie movie3 = new Movie(3, "Coringa", LocalDate.of(2019, 10, 4), 122, 3, "Drama");
         
-        // Sessões para Vingadores
         Showing showing1 = new Showing(1, movie1, 1, LocalDate.now().plusDays(1), LocalTime.of(14, 30), new BigDecimal("25.00"));
         showing1.setTickets(100);
         showing1.setPurchasedTickets(new ArrayList<>());
@@ -34,7 +33,6 @@ public class MovieRepository extends BaseRepository<Movie> {
         showing2.setPurchasedTickets(tickets2);
         movie1.addShowing(showing2);
         
-        // Sessão para Parasita
         Showing showing3 = new Showing(3, movie2, 1, LocalDate.now().plusDays(2), LocalTime.of(16, 00), new BigDecimal("22.00"));
         showing3.setTickets(80);
         ArrayList<Ticket> tickets3 = new ArrayList<>();
