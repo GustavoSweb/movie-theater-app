@@ -12,7 +12,10 @@ import Repository.BaseRepository;
 public class MovieRepository extends BaseRepository<Movie> {
 
     public MovieRepository() {
-        loadDefaultMovies();
+        super("movies.txt");
+        if (items.isEmpty()) {
+            loadDefaultMovies();
+        }
     }
 
     private void loadDefaultMovies() {

@@ -7,6 +7,11 @@ import Repository.BaseRepository;
 
 public class TicketRepository extends BaseRepository<Ticket> {
 
+    public TicketRepository() {
+        super("tickets.txt");
+    }
+
+
     @Override
     public Ticket findById(int id) {
         return items.stream().filter(t -> t.getId() == id).findFirst().orElse(null);
