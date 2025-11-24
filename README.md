@@ -4,17 +4,43 @@ Aplicativo desenvolvido para facilitar a compra de ingressos e a gestão das ope
 Descrição...
 ### Estrutura de pastas
 ```bash
-.
-└── root/
+
+movie-theater-app/
 ├── src/
+│   ├── App/
+│   │   └── App.java                     # Ponto de entrada do programa
+│   │
 │   ├── Model/
-│   │   └── User.java # Representa os dados e regras de negócio
+│   │   ├── Movie.java                   # Modelo de Filme
+│   │   ├── Showing.java                 # Modelo de Sessão
+│   │   ├── Ticket.java                  # Modelo de Ingresso
+│   │   └── User.java                    # Modelo de Usuário
+│   │
+│   ├── Repository/
+│   │   ├── BaseRepository.java          # Funções genéricas para repositórios
+│   │   ├── MovieRepository.java         # Persistência de filmes
+│   │   ├── ShowingRepository.java       # Persistência de sessões
+│   │   └── TicketRepository.java        # Persistência de ingressos
+│   │
 │   ├── Controller/
-│   │   └── UserController.java # Controla a lógica e a comunicação entre Model e View
+│   │   ├── MovieController.java         # Regras de filme
+│   │   ├── ShowingController.java       # Regras de sessão
+│   │   ├── TicketController.java        # Regras de ingressos
+│   │   └── UserController.java          # Regras de usuário
+│   │
 │   ├── View/
-│   │   └── UserView.java # Interface de apresentação (CLI, GUI, Web)
-│   └── assets/ # Recursos estáticos (imagens, ícones, arquivos)
-├── .env.example # Exemplo de variáveis de ambiente
-├── LICENSE # Tipo de licença do projeto (ex: MIT)
-└── README.md # Documentação principal do projeto
-```
+│   │   ├── MovieView.java               # Interface de menu para filmes
+│   │   ├── ShowingView.java             # Interface de menu para sessões
+│   │   └── TicketView.java              # Interface de menu de ingressos
+│   │
+│   ├── Util/
+│   │   └── Validator.java               # Regras de validação
+│   │
+│   ├── Exception/
+│   │   ├── FileOperationException.java  # Erros de leitura/gravação
+│   │   └── InvalidTicketException.java  # Erros relacionados a ingressos inválidos
+│
+├── out/                                 # Arquivos compilados
+├── README.md                            # Documentação do projeto
+├── LICENSE                              # Licença
+└── .gitignore                           # Arquivos ignorados pelo Git
