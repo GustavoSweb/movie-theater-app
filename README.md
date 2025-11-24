@@ -7,8 +7,8 @@ Descrição...
 
 movie-theater-app/
 ├── src/
-│   ├── App/
-│   │   └── App.java                     # Ponto de entrada do programa
+│   ├
+│   │── App.java                     # Ponto de entrada do programa
 │   │
 │   ├── Model/
 │   │   ├── Movie.java                   # Modelo de Filme
