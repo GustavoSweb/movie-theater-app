@@ -7,8 +7,7 @@ Descrição...
 
 movie-theater-app/
 ├── src/
-│   ├
-│   │── App.java                     # Ponto de entrada do programa
+│   ├── App.java                         # Ponto de entrada do programa
 │   │
 │   ├── Model/
 │   │   ├── Movie.java                   # Modelo de Filme
@@ -38,7 +37,7 @@ movie-theater-app/
 │   │
 │   ├── Exception/
 │   │   ├── FileOperationException.java  # Erros de leitura/gravação
-│   │   └── InvalidTicketException.java  # Erros relacionados a ingressos inválidos
+│   │   └── InvalidTicketException.java  # Erros de ingressos inválidos
 │
 ├── out/                                 # Arquivos compilados
 ├── README.md                            # Documentação do projeto
